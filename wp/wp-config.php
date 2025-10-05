@@ -36,7 +36,7 @@ if (isset($_ENV['PASSWORD'])) {
 
 /** Database hostname */
 if (isset($_ENV['HOST'])) {
-  define( 'DB_HOST', $_ENV['HOST'] );
+  define( 'DB_HOST', $_ENV['HOST'].':'.$_ENV['PORT'] );
 }
 
 /** Database charset to use in creating database tables. */
